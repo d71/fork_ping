@@ -1,9 +1,11 @@
+multi thread ping
+using system /bin/ping :)
+
+get host ip from DB, put result to DB
+look /sql/create_db.sql
+
+run: fork_ping configfile.conf
+
 use in cronetab:
 
-#minute (0-59),
-#|      hour (0-23),
-#|      |       day of the month (1-31),
-#|      |       |       month of the year (1-12),
-#|      |       |       |       day of the week (0-6 with 0=Sunday).
-#|      |       |       |       |       commands
 */10 * * * * /usr/local/ping-list/ping-list

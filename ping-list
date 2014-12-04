@@ -1,9 +1,16 @@
 #!/bin/bash
+#use in cronetab:
+#*/10 * * * * /usr/local/ping-list/ping-list
 
-LOG_FILE='/var/log/fork_ping.log'
+LOG_FILE='/var/log/d71_fork_ping.log'
+
+LOG_G_FILE='/var/log/d71_make_graph.log'
 
 DATE_NOW=`/bin/date +%Y%m%d_%H%M%S`
 
 echo $DATE_NOW > $LOG_FILE
 /usr/local/ping-list/fork_ping /usr/local/ping-list 0.conf >> $LOG_FILE
+
+echo $DATE_NOW > $LOG_G_FILE
+/usr/local/ping-list/make_graph >> $LOG_G_FILE
 

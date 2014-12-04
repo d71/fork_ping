@@ -1,0 +1,1 @@
+int c_ping (char *host);

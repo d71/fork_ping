@@ -1,0 +1,9 @@
+#!/bin/bash
+
+LOG_FILE='/var/log/fork_ping.log'
+
+DATE_NOW=`/bin/date +%Y%m%d_%H%M%S`
+
+echo $DATE_NOW > $LOG_FILE
+/usr/local/ping-list/fork_ping /usr/local/ping-list 0.conf >> $LOG_FILE
+

@@ -9,8 +9,8 @@ LOG_G_FILE='/var/log/d71_make_graph.log'
 DATE_NOW=`/bin/date +%Y%m%d_%H%M%S`
 
 echo $DATE_NOW > $LOG_FILE
-/usr/local/ping-list/fork_ping /usr/local/ping-list 0.conf >> $LOG_FILE
+/usr/local/ping-list/fork_ping /usr/local/ping-list/0.conf >> $LOG_FILE
 
 echo $DATE_NOW > $LOG_G_FILE
-/usr/local/ping-list/make_graph >> $LOG_G_FILE
+/usr/local/ping-list/make_graph /usr/local/ping-list/graph.conf>> $LOG_G_FILE
 

@@ -105,9 +105,8 @@ int main(int argc, char * argv[])
 	    
 	}
 
-	printf("%s/%s\n",graph_dir,host);
-	
 	sprintf(file_name,"%s/%s.png",graph_dir,host);
+
 	out = fopen(file_name, "wb");
 	gdImagePng(im1, out);
 	fclose(out);
